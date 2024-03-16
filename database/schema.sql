@@ -1,7 +1,5 @@
 CREATE DATABASE productos;
 
-USE productos;
-
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
@@ -10,3 +8,58 @@ CREATE TABLE productos (
     precio DECIMAL(10, 2) NOT NULL,
     cantidad_stock INT NOT NULL
 );
+
+
+USE sistemainventario;
+
+INSERT INTO productos (nombre, codigo, descripcion, precio, cantidad_stock) VALUES
+('Producto 1', 'ABC123', 'Descripción del Producto 1', 10.99, 15),
+('Producto 2', 'DEF456', 'Descripción del Producto 2', 20.50, 8),
+('Producto 3', 'GHI789', 'Descripción del Producto 3', 5.75, 20),
+('Producto 4', 'JKL012', 'Descripción del Producto 4', 15.25, 12),
+('Producto 5', 'MNO345', 'Descripción del Producto 5', 8.99, 5),
+('Producto 6', 'PQR678', 'Descripción del Producto 6', 12.75, 25),
+('Producto 7', 'STU901', 'Descripción del Producto 7', 18.50, 3),
+('Producto 8', 'VWX234', 'Descripción del Producto 8', 6.99, 18),
+('Producto 9', 'YZA567', 'Descripción del Producto 9', 14.50, 10),
+('Producto 10', 'BCD890', 'Descripción del Producto 10', 9.75, 7),
+('Producto 11', 'EFG123', 'Descripción del Producto 11', 17.99, 14),
+('Producto 12', 'HIJ456', 'Descripción del Producto 12', 22.50, 2),
+('Producto 13', 'KLM789', 'Descripción del Producto 13', 5.25, 30),
+('Producto 14', 'NOP012', 'Descripción del Producto 14', 13.75, 9),
+('Producto 15', 'PQR345', 'Descripción del Producto 15', 9.99, 22),
+('Producto 16', 'STU678', 'Descripción del Producto 16', 11.50, 11),
+('Producto 17', 'VWX901', 'Descripción del Producto 17', 7.99, 17),
+('Producto 18', 'YZA234', 'Descripción del Producto 18', 16.50, 6),
+('Producto 19', 'BCD567', 'Descripción del Producto 19', 8.75, 28),
+('Producto 20', 'EFG890', 'Descripción del Producto 20', 10.99, 4),
+('Producto 21', 'HIJ123', 'Descripción del Producto 21', 19.50, 13),
+('Producto 22', 'KLM456', 'Descripción del Producto 22', 4.75, 19),
+('Producto 23', 'NOP789', 'Descripción del Producto 23', 14.25, 16),
+('Producto 24', 'PQR012', 'Descripción del Producto 24', 7.99, 1),
+('Producto 25', 'STU345', 'Descripción del Producto 25', 12.50, 23),
+('Producto 26', 'VWX678', 'Descripción del Producto 26', 6.99, 5),
+('Producto 27', 'YZA901', 'Descripción del Producto 27', 15.50, 9),
+('Producto 28', 'BCD234', 'Descripción del Producto 28', 9.75, 11),
+('Producto 29', 'EFG567', 'Descripción del Producto 29', 11.99, 14),
+('Producto 30', 'HIJ890', 'Descripción del Producto 30', 20.50, 7),
+('Producto 31', 'KLM123', 'Descripción del Producto 31', 5.25, 18),
+('Producto 32', 'NOP456', 'Descripción del Producto 32', 14.75, 3),
+('Producto 33', 'PQR789', 'Descripción del Producto 33', 8.99, 12),
+('Producto 34', 'STU012', 'Descripción del Producto 34', 13.50, 6),
+('Producto 35', 'VWX345', 'Descripción del Producto 35', 7.99, 25),
+('Producto 36', 'YZA678', 'Descripción del Producto 36', 16.50, 10),
+('Producto 37', 'BCD901', 'Descripción del Producto 37', 9.75, 5),
+('Producto 38', 'EFG234', 'Descripción del Producto 38', 11.99, 17),
+('Producto 39', 'HIJ567', 'Descripción del Producto 39', 20.50, 8),
+('Producto 40', 'KLM890', 'Descripción del Producto 40', 5.25, 14),
+('Producto 41', 'NOP123', 'Descripción del Producto 41', 14.75, 2),
+('Producto 42', 'PQR456', 'Descripción del Producto 42', 8.99, 20),
+('Producto 43', 'STU789', 'Descripción del Producto 43', 13.50, 11),
+('Producto 44', 'VWX012', 'Descripción del Producto 44', 7.99, 9),
+('Producto 45', 'YZA345', 'Descripción del Producto 45', 16.50, 15),
+('Producto 46', 'BCD678', 'Descripción del Producto 46', 9.75, 4),
+('Producto 47', 'EFG901', 'Descripción del Producto 47', 11.99, 7),
+('Producto 48', 'HIJ234', 'Descripción del Producto 48', 20.50, 19),
+('Producto 49', 'KLM567', 'Descripción del Producto 49', 5.25, 6),
+('Producto 50', 'NOP890', 'Descripción del Producto 50', 14.75, 12);

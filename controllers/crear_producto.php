@@ -9,6 +9,7 @@ $cantidad_stock = $_POST['cantidad_stock'];
 
 $query = "INSERT INTO productos (nombre, codigo, descripcion, precio, cantidad_stock) VALUES ('$nombre', '$codigo', '$descripcion', '$precio', '$cantidad_stock')";
 
+
 if($conexion->query($query) === TRUE) {
     header('Location: ../index.php');
 } else {
