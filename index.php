@@ -73,6 +73,10 @@
             <label for="cantidad_stock">Cantidad en Stock:</label>
             <input type="number" class="form-control" id="cantidad_stock" name="cantidad_stock">
         </div>
+        <div class="form-group">
+            <label for="id_ubicacion">id_ubicacion</label>
+            <input type="number" class="form-control" id="id_ubicacion" name="id_ubicacion">
+        </div>
         <button type="submit" class="btn btn-primary">Agregar</button>
     </form>
 </div>

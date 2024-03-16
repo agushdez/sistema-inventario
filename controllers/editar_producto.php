@@ -21,7 +21,7 @@ if ($conexion->query($sql) === TRUE) {
     //si ubicacion temporal cambia de estado significa que lo tenemos que reportar a la tabla de movimientos
     if ($id_ubicacion != $id_ubicacion_temporal) {
         $fecha_actual = date('Y-m-d'); // Obtiene la fecha actual en el formato de tipo DATE
-        $sql_movimientos = "INSERT INTO movimientos (fecha, id_producto, id_ubicacion) VALUES ('$fecha_actual', '$id', '$id_ubicacion')";
+        $sql_movimientos = "INSERT INTO movimientos (fecha, id_producto, id_ubicacion, tipo_movimiento) VALUES ('$fecha_actual', '$id', '$id_ubicacion', 'Cambio de id_ubicacion')";
         if ($conexion->query($sql_movimientos) === TRUE) {
             header('Location: ../index.php');
         }
