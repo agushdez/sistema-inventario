@@ -14,10 +14,11 @@
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>codigo</th>
-                    <th>descripcion</th>
-                    <th>precio</th>
-                    <th>cantidad_stock</th>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Cantidad en Stock</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,8 +35,8 @@
                             <td>{$data['precio']}</td>
                             <td>{$data['cantidad_stock']}</td>
                             <td>
-                                <a href='editar.php?id={$data['id']}' class='btn btn-primary btn-sm'>Editar</a>
-                                <a href='eliminar.php?id={$data['id']}' class='btn btn-danger btn-sm'>Eliminar</a>
+                                <a href='vistas/editar-producto.php?id={$data['id']}' class='btn btn-primary btn-sm'>Editar</a>
+                                <a href='controllers/eliminar_producto.php?id={$data['id']}' class='btn btn-danger btn-sm'>Eliminar</a>
                             </td>
                           </tr>";
                 }
@@ -44,32 +45,28 @@
         </table>
 
         <h2 class="mt-5">Agregar Producto</h2>
-        <form action="crear.php" method="POST">
+        <form action="controllers/crear_producto.php" method="POST">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" class="form-control" id="nombre" name="nombre">
             </div>
             <div class="form-group">
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" class="form-control" id="cantidad" name="cantidad">
-            </div>
-            <div class="form-group">
-                <label for="codigo">codigo:</label>
+                <label for="codigo">Código:</label>
                 <input type="number" class="form-control" id="codigo" name="codigo">
             </div>
             <div class="form-group">
-                <label for="descripcion">descripcion:</label>
-                <input type="number" class="form-control" id="descripcion" name="descripcion">
+                <label for="descripcion">Descripción:</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion">
             </div>
             <div class="form-group">
-                <label for="precio">precio:</label>
+                <label for="precio">Precio:</label>
                 <input type="number" class="form-control" id="precio" name="precio">
             </div>
             <div class="form-group">
-                <label for="cantidad_stock">cantidad_stock:</label>
+                <label for="cantidad_stock">Cantidad en Stock:</label>
                 <input type="number" class="form-control" id="cantidad_stock" name="cantidad_stock">
             </div>
-            <button type="submit" class="btn">Agregar</button>
+            <button type="submit" class="btn btn-primary">Agregar</button>
         </form>
     </div>
 </body>
