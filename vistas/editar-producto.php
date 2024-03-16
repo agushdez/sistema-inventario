@@ -20,6 +20,7 @@
     <h2>Editar Producto</h2>
     <form action="../controllers/editar_producto.php?id=<?= $data['id'] ?>" method="POST">
         <input type="hidden" name="id" value="<?= $data['id'] ?>">
+        <input type="hidden" name="id_ubicacion_temporal" value="<?= $data['id_ubicacion'] ?>
 
         <div class="form-group">
             <label for="nombre">Nombre:</label>
@@ -42,6 +43,11 @@
             <label for="cantidad_stock">Cantidad en Stock:</label>
             <input type="number" class="form-control" id="cantidad_stock" name="cantidad_stock"
                    value="<?= $data['cantidad_stock'] ?>">
+        </div>
+        <div class="form-group">
+            <label for="id_ubicacion">id_ubicacion</label>
+            <input type="number" class="form-control" id="id_ubicacion" name="id_ubicacion"
+                   value="<?= $data['id_ubicacion'] ?>">
         </div>
         <button type="submit" class="btn">Editar</button>
     </form>

@@ -16,3 +16,4 @@ if($conexion->query($query) === TRUE) {
     echo 'Error al registrar el producto';
 }
 ?>
+

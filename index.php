@@ -9,6 +9,8 @@
 </head>
 <body>
 <a href="vistas/reportes.php">Reportes</a>
+<a href="vistas/ubicaciones.php">Ubicaciones</a>
+<a href="vistas/movimientos.php">movimientos</a>
 
 <div class="container mt-5">
     <h2 class="mb-3">Lista de Productos</h2>
@@ -21,6 +23,7 @@
             <th>Descripción</th>
             <th>Precio</th>
             <th>Cantidad en Stock</th>
+            <th>ID Ubicacion</th>
             <th>Acciones</th>
         </tr>
         </thead>
@@ -37,6 +40,7 @@
                             <td>{$data['descripcion']}</td>
                             <td>{$data['precio']}</td>
                             <td>{$data['cantidad_stock']}</td>
+                            <td>{$data['id_ubicacion']}</td>
                             <td>
                                 <a href='vistas/editar-producto.php?id={$data['id']}' class='btn btn-primary btn-sm'>Editar</a>
                                 <a href='controllers/eliminar_producto.php?id={$data['id']}' class='btn btn-danger btn-sm'>Eliminar</a>
