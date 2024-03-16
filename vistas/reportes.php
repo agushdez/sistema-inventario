@@ -11,6 +11,7 @@
     <a href="../index.php">Regresar</a>
     <div class="container mt-5">
         <h2>Reporte de Productos con Stock Bajo(MENOS DE 10)</h2>
+        <a href='../controllers/reportes_controller.php?action=generarReporteBajoStock' class='btn btn-sm'>Generar PDF</a>
         <table class="table">
             <thead>
                 <tr>
