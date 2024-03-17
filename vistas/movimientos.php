@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Movimientos</title>
 </head>
 <body>
 <div class="text-center"></div>
 <a href="../index.php">Regresar</a>
 <h2>Movimientos y registros</h2>
-<a href="fpdfmovimientos.php">Reporte PDF</a>
+<a class="'btn btn-primary btn-sm'" href="../fpdfmovimientos.php">Reporte PDF</a>
 <table class="table">
     <thead>
     <tr>

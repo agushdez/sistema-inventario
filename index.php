@@ -11,8 +11,7 @@
 <a href="vistas/reportes.php">Reportes</a>
 <a href="vistas/ubicaciones.php">Ubicaciones</a>
 <a href="vistas/movimientos.php">movimientos</a>
-<a href="fpdfmovimientos.php">movimientos</a>
-<a href="fpdfproductos.php">productos</a>
+<a class='btn btn-primary btn-sm' href="fpdfproductos.php">Reporte PDF</a>
 
 <div class="container mt-5">
     <h2 class="mb-3">Lista de Productos</h2>
