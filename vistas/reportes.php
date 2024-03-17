@@ -8,7 +8,8 @@
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 <body>
-    <a href="../index.php">Regresar</a>
+    <a
+
     <div class="container mt-5">
         <h2>Reporte de Productos con Stock Bajo(MENOS DE 10)</h2>
         <a href='../controllers/reportes_controller.php?action=generarReporteBajoStock' class='btn btn-sm'>Generar PDF</a>
@@ -36,7 +37,7 @@
                             <td>{$producto['codigo']}</td>
                             <td>{$producto['cantidad_stock']}</td>
                             <td>
-                                <a href='../controllers/reportes_controller.php?action=agregarDiezMaz&id={$producto['id']}' class='btn btn-sm'>+10</a>
+                                <a href='../controllers/reportes_controller.php?action=generarReporteBajoStock' class='btn btn-sm'>+10</a>
                             </td>
                           </tr>";
                 }

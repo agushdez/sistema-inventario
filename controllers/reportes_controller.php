@@ -22,7 +22,7 @@ class reportes_controller {
         }
     }
 
-    public function generarReporteBajoStock() {
+    public function generarReporteBajoStock22() {
         require('fpdf.php');
 
         $pdf = new FPDF();
@@ -30,6 +30,10 @@ class reportes_controller {
         $pdf->SetFont('Arial','B',16);
         $pdf->Cell(40,10,'¡Hola, Mundo!');
         $pdf->Output();
+    }
+
+    public function generarReporteBajoStock() {
+        header('Location: ../index.php');
     }
 
     //Funcionalidad futura
