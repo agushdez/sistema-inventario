@@ -1,12 +1,10 @@
 <?php
 include '../database/conexion.php';
 
-class CrearProductoController {
-    public function __construct() {
-        // Constructor, si es necesario
-    }
-
-    public function crearProducto($nombre, $codigo, $descripcion, $precio, $cantidad_stock) {
+class CrearProductoController
+{
+    public function crearProducto($nombre, $codigo, $descripcion, $precio, $cantidad_stock)
+    {
         global $conexion;
         $nombre = $_POST['nombre'];
         $codigo = $_POST['codigo'];
@@ -16,7 +14,7 @@ class CrearProductoController {
 
         $query = "INSERT INTO productos (nombre, codigo, descripcion, precio, cantidad_stock) VALUES ('$nombre', '$codigo', '$descripcion', '$precio', '$cantidad_stock')";
 
-        if($conexion->query($query) === TRUE) {
+        if ($conexion->query($query) === TRUE) {
             header('Location: ../index.php');
         } else {
             echo 'Error al registrar el producto';
@@ -24,12 +22,10 @@ class CrearProductoController {
     }
 }
 
-class EditarProductoController {
-    public function __construct() {
-        // Constructor, si es necesario
-    }
-
-    public function editarProducto($id, $nombre, $codigo, $descripcion, $precio, $cantidad_stock) {
+class EditarProductoController
+{
+    public function editarProducto($id, $nombre, $codigo, $descripcion, $precio, $cantidad_stock)
+    {
         global $conexion;
         $id = $_POST['id'];
         $nombre = $_POST['nombre'];
@@ -47,7 +43,4 @@ class EditarProductoController {
         }
     }
 }
-
-// Otros controladores aquí...
-
 ?>

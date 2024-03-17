@@ -8,30 +8,30 @@
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 <body>
-    <a
+<a
 
-    <div class="container mt-5">
-        <h2>Reporte de Productos con Stock Bajo(MENOS DE 10)</h2>
-        <a href='../controllers/reportes_controller.php?action=generarReporteBajoStock' class='btn btn-sm'>Generar PDF</a>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Código</th>
-                    <th>Cantidad en Stock</th>
-                    <th>Opciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                include '../controllers/reportes_controller.php';
+<div class="container mt-5">
+    <h2>Reporte de Productos con Stock Bajo(MENOS DE 10)</h2>
+    <a href='../controllers/reportes_controller.php?action=generarReporteBajoStock' class='btn btn-sm'>Generar PDF</a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Código</th>
+            <th>Cantidad en Stock</th>
+            <th>Opciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+        include '../controllers/reportes_controller.php';
 
-                $reportesController = new reportes_controller();
-                $productos = $reportesController->obtenerProductosBajoStock();
+        $reportesController = new reportes_controller();
+        $productos = $reportesController->obtenerProductosBajoStock();
 
-                foreach ($productos as $producto) {
-                    echo "<tr>
+        foreach ($productos as $producto) {
+            echo "<tr>
                             <td>{$producto['id']}</td>
                             <td>{$producto['nombre']}</td>
                             <td>{$producto['codigo']}</td>
@@ -40,10 +40,10 @@
                                 <a href='../controllers/reportes_controller.php?action=generarReporteBajoStock' class='btn btn-sm'>+10</a>
                             </td>
                           </tr>";
-                }
-                ?>
-            </tbody>
-        </table>
-    </div>
+        }
+        ?>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

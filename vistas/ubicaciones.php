@@ -7,29 +7,29 @@
     <title>Ubicaciones</title>
 </head>
 <body>
-    <a href="../index.php">Regresar</a>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>sector</th>
-            <th>seccion</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php
-        include '../database/conexion.php';
-        $query = "SELECT * FROM ubicaciones";
-        $result = $conexion->query($query);
-        while ($data = $result->fetch_assoc()) {
-            echo "<tr>
+<a href="../index.php">Regresar</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>sector</th>
+        <th>seccion</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+    include '../database/conexion.php';
+    $query = "SELECT * FROM ubicaciones";
+    $result = $conexion->query($query);
+    while ($data = $result->fetch_assoc()) {
+        echo "<tr>
                     <td>{$data['id']}</td>
                     <td>{$data['sector']}</td>
                     <td>{$data['seccion']}</td>
                 </tr>";
-        }
-        ?>
-        </tbody>
-    </table>
+    }
+    ?>
+    </tbody>
+</table>
 </body>
 </html>
